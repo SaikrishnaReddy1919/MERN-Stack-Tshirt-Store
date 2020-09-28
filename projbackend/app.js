@@ -13,6 +13,7 @@ const userRoute = require('./routes/user')
 const categoryRoute = require('./routes/category')
 const productRoute = require('./routes/product')
 const orderRoute = require('./routes/order')
+const stripeRoute = require('./routes/stripepayment')
 
 
 // 27107 is the default port where mongodb is listening on -> to see open terminal and type 'mongod' to see the port number. If connection failed run 'mongod' in the terminal.
@@ -40,6 +41,7 @@ app.use('/api', userRoute)
 app.use('/api', categoryRoute)
 app.use('/api', productRoute)
 app.use('/api', orderRoute)
+app.use('/api', stripeRoute)
 // Port
 const port = 5000
 

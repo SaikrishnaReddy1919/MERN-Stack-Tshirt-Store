@@ -7,6 +7,7 @@ import { getProducts } from './helper/coreapicalls'
 
 
 
+
 export default function Home() {
 
     const [products, setProducts] = useState([])
@@ -14,6 +15,7 @@ export default function Home() {
 
     const loadAllProducts = () => {
         getProducts().then(data => {
+            // console.log(data)
             if (data.error) {
                 setError(data.error)
             } else {
